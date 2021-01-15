@@ -1,66 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev.Finance$</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!--<h1>Começando os estudos</h1>
     <p>2021 será o meu anoooo</p>
     <strong>Aponta para a fé e reme</strong>
     -->
-    <h1>Dev.finance$</h1>
 
-    <h2>Balanço</h2>
+    <!-- Tags semanticas, são tags que causam estrutura e também significado-->
+    <header>
+        <h1 id="logo">Dev.finance$</h1>
+    </header>
 
-    <h3>Entradas</h3>
-    <p>R$ 5.000,00</p>
+    <main>
+        <section id="balance">
+            <h2>Balanço</h2>
+            <!-- Enquanto o id é unico, a class pode ser de vários-->
+            <div class="card">
+                <h3>Entradas</h3>
+                <p>R$ 5.000,00</p>
+            </div>
+            <div class="card">
+                <h3>Saídas</h3>
+                <p>R$ 2.000,00</p>
+            </div>
+            <div class="card">
+                <h3>Total</h3>
+                <p>R$ 3.000,00</p>
+            </div>
 
-    <h3>Saídas</h3>
-    <p>R$ 2.000,00</p>
+        </section>
+        <section id="transaction">
+            <h2>Transações</h2>
+            <!-- Como construir tabelas HTML-->
+            <table id="data-table">
+                <thead>
+                    <!-- Cabeçalho da tabela-->
+                    <tr>
+                        <!-- Linha do cabeçalho-->
+                        <th>
+                            <!-- Item do cabeçalho, separa os dados na linha da head-->
+                            Descrição
+                        </th>
+                        <th>
+                            <!-- Item do cabeçalho-->
+                            Valor
+                        </th>
+                        <th>
+                            <!-- Item do cabeçalho-->
+                            Data
 
-    <h3>Total</h3>
-    <p>R$ 3.000,00</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Corpo -->
+                    <tr>
+                        <td>
+                            <!-- item da linha do body-->
+                            Luz
 
-    <h2>Transações</h2>
-    <!-- Como construir tabelas HTML-->
-    <table>
-        <thead>
-            <!-- Cabeçalho da tabela-->
-            <tr>
-                <!-- Linha do cabeçalho-->
-                <th>
-                    <!-- Item do cabeçalho, separa os dados na linha da head-->
-                    Descrição
-                </th>
-                <th>
-                    <!-- Item do cabeçalho-->
-                    Valor 
-                </th>
-                <th>
-                    <!-- Item do cabeçalho-->
-                    Data
-                
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Corpo -->
-            <tr>
-                <td>
-                    <!-- item da linha do body-->
-                </td>
-                <td>
-                    <!-- item da linha do body-->
-                </td>
-                <td>
-                    <!-- item da linha do body-->
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                        </td>
+                        <td>
+                            <!-- item da linha do body-->
+                            - R$ 500,00
+
+                        </td>
+                        <td>
+                            <!-- item da linha do body-->
+                            23/01/2021
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <!-- item da linha do body-->
+                            Criação website
+                        </td>
+                        <td>
+                            <!-- item da linha do body-->
+                            R$ 5.000,00
+                        </td>
+                        <td>
+                            <!-- item da linha do body-->
+                            23/01/2021
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <!-- item da linha do body-->
+                            Internet
+                        </td>
+                        <td>
+                            <!-- item da linha do body-->
+                            - R$ 200,00
+                        </td>
+                        <td>
+                            <!-- item da linha do body-->
+                            23/01/2021
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Rodapé: foother é uma tag semântica-->
+        <p>dev.finance$</p>
+    </footer>
 
 </body>
 
