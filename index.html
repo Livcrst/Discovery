@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev.Finance$</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +23,7 @@
         <h1 id="logo">Dev.finance$</h1>
     </header>
 
-    <main>
+    <main class="container">
         <section id="balance">
             <h2>Balanço</h2>
             <!-- Enquanto o id é unico, a class pode ser de vários-->
@@ -31,7 +35,7 @@
                 <h3>Saídas</h3>
                 <p>R$ 2.000,00</p>
             </div>
-            <div class="card">
+            <div class="card total">
                 <h3>Total</h3>
                 <p>R$ 3.000,00</p>
             </div>
@@ -63,17 +67,17 @@
                 <tbody>
                     <!-- Corpo -->
                     <tr>
-                        <td>
+                        <td class="description">
                             <!-- item da linha do body-->
                             Luz
 
                         </td>
-                        <td>
+                        <td class="expense">
                             <!-- item da linha do body-->
                             - R$ 500,00
 
                         </td>
-                        <td>
+                        <td class="date">
                             <!-- item da linha do body-->
                             23/01/2021
 
@@ -81,30 +85,30 @@
                     </tr>
 
                     <tr>
-                        <td>
+                        <td class="description">
                             <!-- item da linha do body-->
                             Criação website
                         </td>
-                        <td>
+                        <td class="income">
                             <!-- item da linha do body-->
                             R$ 5.000,00
                         </td>
-                        <td>
+                        <td class="date">
                             <!-- item da linha do body-->
                             23/01/2021
                         </td>
                     </tr>
 
                     <tr>
-                        <td>
+                        <td class="description">
                             <!-- item da linha do body-->
                             Internet
                         </td>
-                        <td>
+                        <td class="expense">
                             <!-- item da linha do body-->
                             - R$ 200,00
                         </td>
-                        <td>
+                        <td class="date">
                             <!-- item da linha do body-->
                             23/01/2021
                         </td>
