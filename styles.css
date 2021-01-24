@@ -7,6 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    font-size: 93.75%; /* 15px */
+}
 body{
     background: #f0f2f5;
     font-family: 'Poppins', sans-serif;
@@ -20,6 +23,7 @@ body{
     margin: -1px;
     overflow: hidden;
     clip: rect(0,0,0);
+    
     white-space: nowrap;
     border-width: 0;
 
@@ -111,10 +115,17 @@ header{
 }
 
 /* ========= Table =========== */
+#transaction{
+    display: block;
+    width: 100%; /* pegar todo oo espaço do container em que está inserido */
+    overflow-x: auto;
+}
 #data-table{
-     width: 100%; /* pegar todo oo espaço do container em que está inserido */
-     border-spacing: 0 0.5rem;
-     color: #969cb3;
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: #969cb3;
+
+    
 }
 table thead tr th:first-child,
  table tbody tr td:first-child{
@@ -160,12 +171,79 @@ td.income {
 td.expense {
     color: #e92929;
 }
+/* ========= Modal =========== */
+.modal-overlay{
 
+    /* Cria a mascara escura que aparece quando seleciona para adicionar um item */
+    width: 100%;
+    height: 100%;
 
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: fixed;
+    top: 0;
+/* ajusta tudo no meio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    background: #F0F2F5;
+    padding: 2.4rem;
+    width: 90%;
+    max-width: 500px;
+
+}
+
+/* ========= Form =========== */
+#form{
+    max-width: 500px;
+
+}
+#form h2{
+    margin-top: 0;
+}
+#form form input{
+    border: none;
+    border-radius: 0.2rem;
+
+    padding: .8rem;
+    width: 100%;
+
+}
+.input-group{
+    margin-top: 0.8rem;
+}
+.input-group small{
+    opacity: 0.4;
+}
+.input-group.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 /* ========= Foother =========== */
 footer{
     text-align: center;
     padding: 4rem 0 2rem;
     color: var(--dark-blue);
     opacity: 0.6;
+}
+/* ========= Responsive =========== */
+@media (min-width:800px){
+    html{
+        font-size: 87.5%;
+    }
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+    }
 }
