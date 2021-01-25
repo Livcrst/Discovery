@@ -61,7 +61,7 @@
             <h2 class="sr-only">Transações</h2>
             <!-- Como construir tabelas HTML-->
 
-            <a href="#" class="button new">+ Nova Transação</a>
+            <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
             <table id="data-table">
                 <thead>
                     <!-- Cabeçalho da tabela-->
@@ -146,7 +146,7 @@
             </table>
         </section>
     </main>
-    <div class="modal-overlay active">
+    <div class="modal-overlay">
         <div class="modal">
             <div id="form">
                 <h2>Nova Transação</h2>
@@ -170,8 +170,8 @@
                         <input type="date" id="date" name="date" placeholder="date">
                     </div>
 
-                    <div class="input-goup actions">
-                        <a href="#" class="button cancel">Cancelar</a>
+                    <div class="input-group actions">
+                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
                         <button>Salvar</button>
                     </div>
 
@@ -183,8 +183,30 @@
 
     <footer>
         <!-- Rodapé: foother é uma tag semântica-->
-        <p>dev.finance$</p>
+        <p> 2021 dev.finance$</p>
     </footer>
+
+    <script>
+        const Modal = {
+            open(){
+                // Abrir modal 
+                // Adicionar a class active ao modal
+                document
+                .querySelector('.modal-overlay')
+                .classList.add('active')
+
+
+            },
+            close(){
+                // fechar o modal
+                //remover a classe active do modal
+                document
+                .querySelector('.modal-overlay')
+                .classList.remove('active')
+
+            }
+        }
+    </script>
 
 </body>
 
